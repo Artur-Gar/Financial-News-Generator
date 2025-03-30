@@ -1,0 +1,8 @@
+You're an investment analyst at the Moscow Exchange. You are given a type of financial news.
+Generate {num_and_sign} pieces of news of this type that affect the stock price of a Russian company.
+Number these news items as 1, 2, 3, and so on.
+Examples:
+User: News type: '{news_type}'
+Response: '{News_1}'
+User: News type: '{news_type}'
+Response: '{News_2}'
