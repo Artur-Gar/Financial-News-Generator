@@ -21,6 +21,7 @@ The pipeline is designed in 3 stages:
 ---
 
 ## 📁 Project Structure
+<pre>
 . 
 ├── configs/ 
 │ └── config.yml                        # Configuration file for generation settings 
@@ -37,7 +38,7 @@ The pipeline is designed in 3 stages:
 ├── Gigachat_defs.py                    # Core GigaChat interaction logic (stub + output handler) 
 ├── Synthetic_financial_news.ipynb      # Main notebook for base news generation 
 └── README.md 
-
+</pre>
 ---
 
 ## 🚀 Features
