@@ -1,25 +1,78 @@
-# Synthetic News Generation
+Synthetic Financial News Generator
 
-Task Description:
-"""
-We need to generate synthetic news based on real ones to eliminate the imbalance across news types, which would hinder future training of ML models.
-"""
+This repository contains a full pipeline for generating **synthetic financial news** to address class imbalance across different news types — a crucial step for training robust machine learning models in finance and investment domains.
 
-The task consists of the following stages:
-1) Generate 20 instances for each news type and ddd weights for each news type
-2) Duplicate each generated news item
+---
 
-For Stage 1) – Script: Gigachat_defs
-Notebook: Synthetic_financial_news.ipynb
-  - prompt_templates contains all necessary templates and the list of news types.
-  - Gigachat_defs contains a stub for GigaChat (gigachat_stub), which needs to be run because GigaChat often doesn't respond on the first attempt.
-  - llm_output in Gigachat_defs is used to retrieve responses.
-  - Generate 10 positive and 10 negative news items for those types where sentiment (impact sign on stock price) can be determined.
-  - Generate 20 neutral (sign-free) news items for the rest.
-  - Add a weight to each news item (values are set based on expert judgment).
+## 📌 Project Overview
 
-For Stage 2):
-Notebook: Giga_generate_add_news.ipynb
-  - For each generated news item, generate 3 additional versions with different lengths.
+The pipeline is designed in 3 stages:
+1. **Generation of Base News**  
+   - For each news type, generate:
+     - 10 **positive** and 10 **negative** samples (when sentiment is known)
+     - 20 **neutral** samples (for sentiment-free types)
+2. **Weight Assignment**  
+   - Each news type is assigned an expert-defined weight to reflect its importance for model training.
+3. **Length Variation Augmentation**  
+   - Each generated news item is expanded into **3 additional versions** of varying length: short, medium, and long.
 
-Thus, we have 20*4 = 80 news of different length generated for each news type
+**Result:** 80 variations per news type, promoting both balance and diversity in the dataset.
+
+---
+
+## 📁 Project Structure
+. 
+├── configs/ 
+│ └── config.yml                        # Configuration file for generation settings 
+├── data/ 
+│ ├── few_shot_2_each.xlsx              # Few-shot examples (2 per type) 
+│ ├── generated_news.xlsx               # Output from GigaChat generation after adding 3 more news for each generated news
+│ └── synthetic_news.xlsx               # Full synthetic dataset after generating fisrt 20 news of each type
+│ ├── prompt_templates/ 
+├── prompt.txt                          # Primary prompt template 
+│ ├── system_prompt.txt                 # System prompt for context 
+│ ├── system_prompt_news.txt            # Alternative system prompt for news context 
+│ └── types_of_news.txt                 # List of all news types 
+├── Giga_generate_add_news.ipynb        # Notebook to generate variations (short/medium/long) 
+├── Gigachat_defs.py                    # Core GigaChat interaction logic (stub + output handler) 
+├── Synthetic_financial_news.ipynb      # Main notebook for base news generation 
+└── README.md 
+
+---
+
+## 🚀 Features
+
+- **Balanced synthetic dataset** across 20+ financial news categories  
+- **Sentiment-aware generation**: positive/negative/neutral tagging  
+- **Prompt engineering** with fallback strategies for LLM inconsistencies  
+- **Length diversity augmentation** for model robustness  
+- **Few-shot samples** for LLM guidance  
+
+---
+
+## 💡 Example News Types
+
+- Dividend Announcement  
+- Share Buyback  
+- Credit Rating Changes  
+- M&A Activity  
+- Regulatory Updates  
+- Currency & Commodity Fluctuations  
+- Political or Macro Events  
+- Product Launches  
+*(Full list in `prompt_templates/types_of_news.txt`)*
+
+---
+
+## 📈 Use Cases
+
+- Training financial NLP models (e.g., sentiment analysis, news impact)
+- Data augmentation for low-frequency event types
+- Pretraining or fine-tuning language models in the financial domain
+
+---
+
+## 📝 Author
+
+**Artur Garipov**  
+[LinkedIn](www.linkedin.com/in/artur-garipov-36037a319) | [GitHub]([https://github.com](https://github.com/Artur-Gar))
