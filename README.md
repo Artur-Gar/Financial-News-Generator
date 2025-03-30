@@ -1,4 +1,4 @@
-Synthetic Financial News Generator
+# 📰 Synthetic Financial News Generator
 
 This repository contains a full pipeline for generating **synthetic financial news** to address class imbalance across different news types — a crucial step for training robust machine learning models in finance and investment domains.
 
