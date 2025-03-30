@@ -76,4 +76,4 @@ The pipeline is designed in 3 stages:
 ## 📝 Author
 
 **Artur Garipov**  
-[LinkedIn](www.linkedin.com/in/artur-garipov-36037a319) | [GitHub]([https://github.com](https://github.com/Artur-Gar))
+[LinkedIn](www.linkedin.com/in/artur-garipov-36037a319) | [GitHub](https://github.com/Artur-Gar)
