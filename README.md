@@ -1,7 +1,7 @@
 # Gigachat Synthetic News
 
 ## Description
-This is a learning project for generating synthetic financial news with GigaChat.
+This is a work project for generating synthetic financial news with GigaChat LLM.
 The codebase is organized as a Python package in `src/gigachat_synthetic_news` with separate pipeline entrypoints in `scripts/`.
 The workflow has two stages: base synthetic news generation and additional short/medium/long rewrites.
 The project focuses on practicing prompt-driven dataset generation in a clean `src/` repository structure.
