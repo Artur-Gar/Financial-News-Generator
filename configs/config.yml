@@ -1,9 +1,9 @@
 creds: "insert-your-creds"
 model: "GigaChat-Pro"
 
-system_prompt_news_path: "prompt_templates/system_prompt_news.txt"
-system_prompt_path: "prompt_templates/system_prompt.txt"
+system_prompt_news_path: "prompts/system_prompt_news.txt"
+system_prompt_path: "prompts/system_prompt.txt"
 
-prompt_path: "prompt_templates/prompt.txt"
+prompt_path: "prompts/prompt.txt"
 
-type_of_news_path: "prompt_templates/types_of_news.txt"
+type_of_news_path: "prompts/types_of_news.txt"

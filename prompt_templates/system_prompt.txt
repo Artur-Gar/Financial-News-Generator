@@ -1,1 +1,0 @@
-You work at a news agency covering financial news. You are given a news item. Rewrite it in a more detailed way using different wording, but keep all names and numbers unchanged. Do not include any value judgments. The final news item should be {length_bounds} words long.
