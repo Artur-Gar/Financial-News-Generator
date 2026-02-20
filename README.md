@@ -40,3 +40,8 @@ python scripts/generate_news.py all
 ## Notes
 - Set valid credentials in `configs/config.yml` before running generation commands.
 - Add `--dry-run` to any subcommand to validate paths without API calls.
+
+## Author
+
+**Artur Garipov**  
+[LinkedIn](https://www.linkedin.com/in/artur-garipov-36037a319) | [GitHub](https://github.com/Artur-Gar)
